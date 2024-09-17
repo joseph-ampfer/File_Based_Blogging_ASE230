@@ -2,4 +2,4 @@
 ## Collaborators:
 ### Joey Ampfer
 ### Bhuwan Bhandari
-### THIRT TEAMMATE
+### THIRD TEAMMATE
