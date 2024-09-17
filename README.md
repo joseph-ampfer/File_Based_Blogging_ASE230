@@ -1,5 +1,5 @@
 # File_Based_Blogging_ASE230
-## Contributers:
+## Collaborators:
 ### Joey Ampfer
 ### Bhuwan Bhandari
 ### THIRT TEAMMATE
