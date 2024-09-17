@@ -2,4 +2,4 @@
 ## Contributers:
 ### Joey Ampfer
 ### Bhuwan Bhandari
-### THIRT TEAMMATE
+### THIRD TEAMMATE
