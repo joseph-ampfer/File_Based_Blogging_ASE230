@@ -29,11 +29,16 @@ $posts = [
 
 $post_id = $_GET['post_id'];
 
-echo $post_id;
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <title></title>
-  <body></body>
+  <head>
+    <title>Awesome Blog</title>
+  </head>
+  <body>
+    <h1> <?= $posts[$post_id]['title'] ?> </h1>
+    <h4>by <?= $posts[$post_id]['author'] ?> |  <?= $posts[$post_id]['date'] ?></h4>
+    <p><?= $posts[$post_id]['content'] ?></p>
+  </body>
 </html>
