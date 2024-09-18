@@ -31,7 +31,9 @@ $posts = [
 
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
+  <head>
+    <title>Awesome Blog</title>
+  </head>
   <body>
     <h1>Titles:</h1>
     <?php foreach($posts as $key => $post) { ?>
