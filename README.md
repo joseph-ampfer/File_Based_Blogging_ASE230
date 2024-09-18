@@ -1,5 +1,7 @@
 # File_Based_Blogging_ASE230
 ## Collaborators:
-Joey Ampfer
+Joey Ampfer 
+
 Bhuwan Bhandari
+
 dSushant717
