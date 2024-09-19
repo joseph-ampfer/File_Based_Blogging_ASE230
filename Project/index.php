@@ -43,7 +43,7 @@ $posts = [
     }
 
     .btn-subscribe {
-      right: 4px;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -121,7 +121,7 @@ $posts = [
           <h2 class="fw-bold mb-4">Want us to email you with the latest blockbuster news?</h2>
           <form>
             <div class="position-relative">
-              <input type="email" class="form-control rounded-pill py-3 pe-5" id="email" placeholder="john@doe.com">
+              <input type="email" class="form-control rounded-pill py-3 px-4" id="email" placeholder="john@doe.com">
               <button class="btn btn-primary rounded-pill position-absolute btn-subscribe"
                 type="submit">Subscribe</button>
             </div>
