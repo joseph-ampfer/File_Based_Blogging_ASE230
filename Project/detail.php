@@ -4,6 +4,34 @@ $postJSON = file_get_contents('posts.json');
 $posts = json_decode($postJSON, true);
 
 $post_id = $_GET['post_id'];
+$updated = false;
+$rows = [];
+$views = 0;
+
+$fp = fopen('visitors.csv', 'r');
+while(!feof($fp)) {
+  $line = fgetcsv($fp, 0, ';');
+  if ($line) {
+    if ($line[0] == $post_id) {
+      $line[1]++;
+      $views = $line[1];
+      $updated = true;
+    }
+    $rows[] = $line;
+  }
+}
+fclose($fp);
+
+if (!$updated) {
+  $rows[] = [$post_id, 1];
+  $views = 1;
+}
+
+$fp = fopen('visitors.csv', 'w+');
+foreach ($rows as $row) {
+  fputcsv($fp, $row, ';');
+}
+fclose($fp);
 
 ?>
 
@@ -58,6 +86,9 @@ $post_id = $_GET['post_id'];
             <p class="lead"><?= $posts[$post_id]['full-content'] ?></p>
           </section>
         </article>
+        <div>
+          <h3>Views: <?= $views ?> </h3>
+        </div>
       </div>
     </div>
   </main>
