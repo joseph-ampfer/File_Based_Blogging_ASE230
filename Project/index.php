@@ -20,7 +20,7 @@ $posts = json_decode($postJSON, true);
       left: 0;
       right: 0;
       height: 8px;
-      background: linear-gradient(to right, #86efac, #3b82f6, #a855f7);
+      background: linear-gradient(to right, lightblue, blue, orange);
     }
 
     .btn-subscribe {
@@ -42,7 +42,7 @@ $posts = json_decode($postJSON, true);
         <a href="#" class="btn btn-primary me-2">Latest Posts</a>
         <a href="#" class="btn btn-outline-secondary">About Us</a>
       </div>
-      <p class="lead text-muted mt-4">Read below what out TechGeeks say!</p>
+      <p class="lead text-muted mt-4">Read below what our TechGeeks say!</p>
     </div>
   </header>
   <?php foreach ($posts as $key => $post) {
@@ -95,16 +95,18 @@ $posts = json_decode($postJSON, true);
       </div>
     </div>
   <?php } ?>
+  <!-- Footer -->
   <footer class="bg-white py-5">
     <div class="container pb-5">
       <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6 text-center">
-          <h2 class="fw-bold mb-4">Want us to email you with the latest blockbuster news?</h2>
+          <h2 class="fw-bold mb-4">Want to send us your message? Write below and click send.</h2>
           <form>
             <div class="position-relative">
-              <input type="email" class="form-control rounded-pill py-3 px-4" id="email" placeholder="john@doe.com">
-              <button class="btn btn-primary rounded-pill position-absolute btn-subscribe"
-                type="submit">Subscribe</button>
+              <input type="text" class="form-control rounded-pill py-3 px-4" id="email"
+                placeholder="Hello team, keep up the good work!">
+              <button class="btn btn-primary rounded-pill position-relative mt-2 btn-subscribe mt-4 "
+                type="submit">Send</button>
             </div>
           </form>
         </div>
@@ -113,36 +115,8 @@ $posts = json_decode($postJSON, true);
       <div class="row mt-5">
         <div class="col-lg-6 mb-4 mb-lg-0">
           <p class="text-center text-lg-start text-muted">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium natus quod eveniet
-            aut perferendis distinctio iusto repudiandae, provident velit earum?
+            Want to learn more about us? Please send us a message above.
           </p>
-          <div class="d-flex justify-content-center justify-content-lg-start mt-4">
-            <a href="#" class="text-secondary me-3" target="_blank" rel="noreferrer">
-              <svg class="bi" width="24" height="24" fill="currentColor">
-                <use xlink:href="#facebook" />
-              </svg>
-            </a>
-            <a href="#" class="text-secondary me-3" target="_blank" rel="noreferrer">
-              <svg class="bi" width="24" height="24" fill="currentColor">
-                <use xlink:href="#instagram" />
-              </svg>
-            </a>
-            <a href="#" class="text-secondary me-3" target="_blank" rel="noreferrer">
-              <svg class="bi" width="24" height="24" fill="currentColor">
-                <use xlink:href="#twitter" />
-              </svg>
-            </a>
-            <a href="#" class="text-secondary me-3" target="_blank" rel="noreferrer">
-              <svg class="bi" width="24" height="24" fill="currentColor">
-                <use xlink:href="#github" />
-              </svg>
-            </a>
-            <a href="#" class="text-secondary" target="_blank" rel="noreferrer">
-              <svg class="bi" width="24" height="24" fill="currentColor">
-                <use xlink:href="#dribbble" />
-              </svg>
-            </a>
-          </div>
         </div>
         <div class="col-lg-6">
           <div class="row text-center text-lg-start">
@@ -177,12 +151,15 @@ $posts = json_decode($postJSON, true);
       </div>
     </div>
     <div class="border-top pt-4 mt-5">
+      <div class=" text-muted text-center py-4 mt-5">
+        <p class="mb-0">&copy; <?= date("Y") ?> Our Awesome Blog. All rights reserved.</p>
+      </div>
       <div class="container">
         <p class="text-center text-muted small">
-          © Company 2022. All rights reserved.<br>
-          Created with
-          <a href="#" class="text-decoration-none text-secondary">Laravel</a> and
-          <a href="#" class="text-decoration-none text-secondary">Laravel Livewire</a>.
+          Created by
+          <a href="#" class="text-decoration-none text-secondary">Joey</a>,
+          <a href="#" class="text-decoration-none text-secondary">Bhuwan</a> and
+          <a href="#" class="text-decoration-none text-secondary">Sushant</a>.
         </p>
       </div>
     </div>
