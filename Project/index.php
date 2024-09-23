@@ -1,27 +1,8 @@
 <?php
-$posts = [
-  [
-    'title' => 'Exploring the Future of AI',
-    'content' => 'Artificial Intelligence (AI) is rapidly transforming industries. From healthcare to finance, AI is revolutionizing the way we live and work. This blog post explores the advancements in AI and what the future holds for this groundbreaking technology.',
-    'author' => 'Joseph Ampfer',
-    'date' => 'January 22, 2024',
-    'image' => 'Joey.jpeg'
-  ],
-  [
-    'title' => 'The Ultimate Guide to Web Development',
-    'content' => 'Web development has become an essential skill in today’s digital world. Whether you are building a personal website or a large-scale business platform, this guide covers all the key aspects of modern web development including HTML, CSS, JavaScript, and more.',
-    'author' => 'Bhuwan Bhandari',
-    'date' => 'January 22, 2024',
-    'image' => 'Bhuwan.jpg'
-  ],
-  [
-    'title' => 'Getting Started with React: A Beginner’s Guide',
-    'content' => 'React is one of the most popular JavaScript libraries for building user interfaces. In this post, we introduce the basics of React, explain why it’s so powerful for modern web development, and walk through the key concepts like components, state, and props to help you get started on your React journey.',
-    'author' => 'Sushant Dahal',
-    'date' => 'January 22, 2024',
-    'image' => 'Sushant.jpg'
-  ]
-];
+
+$postJSON = file_get_contents('posts.json');
+$posts = json_decode($postJSON, true);
+
 
 
 ?>
