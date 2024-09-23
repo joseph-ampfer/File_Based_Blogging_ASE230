@@ -8,9 +8,18 @@ $updated = false;
 $rows = [];
 $views = 0;
 
+// Read all rows of the csv into $rows
+// [post_id, count] May look like $rows = [
+//   [0,1],
+//   [1,1],
+//   [2,1],...
+// ]
+// If a row for this post_id exists, increment the counter
+// Save the view count
 $fp = fopen('visitors.csv', 'r');
 while(!feof($fp)) {
   $line = fgetcsv($fp, 0, ';');
+
   if ($line) {
     if ($line[0] == $post_id) {
       $line[1]++;
@@ -22,11 +31,16 @@ while(!feof($fp)) {
 }
 fclose($fp);
 
+// Row for this post didn't exist, make new entry 
+// start with views as 1 (first visit to this blog post)
+// save the view count
 if (!$updated) {
   $rows[] = [$post_id, 1];
   $views = 1;
 }
 
+// Rewrite the whole csv file
+// using each sub-array in the 'rows' array
 $fp = fopen('visitors.csv', 'w+');
 foreach ($rows as $row) {
   fputcsv($fp, $row, ';');
